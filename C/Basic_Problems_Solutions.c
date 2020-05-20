@@ -3,12 +3,12 @@
 
 int get_choice();
 void vowels_consonets_digits(char vcd[30]);
-
+void reverse_number(int num);
 
 void main()
 {
 	char input[30];
-	int choice;
+	int choice,num;
 	choice = get_choice();
 	switch(choice)
 	{
@@ -17,6 +17,12 @@ void main()
 		printf("Enter a string : ");
 		scanf("%s",&input);
 		vowels_consonets_digits(input);
+		break;
+	case 2:
+		printf("\n\t Reverse a given number \n");
+		printf("Enter a Number : ");
+		scanf("%d",&num);
+		reverse_number(num);
 		break;
 	default :
 		printf("Error : Invalid Choice\n");
@@ -29,6 +35,7 @@ int get_choice()
 	int choice;
 	printf("\t Basic Problems and Solutions \n");
         printf(" 1. Vowels_Consonets_Digits \n");
+	printf(" 2. Reverse a Given Number \n");
 	printf("Enter Your choice : ");
 	scanf("%d",&choice);
 	return choice;
@@ -51,4 +58,16 @@ void vowels_consonets_digits(char vcd[30])
                 else
                         printf(" %c : consonant\n",t);
         }
+}
+
+void reverse_number(int num)
+{
+	int n=num,r=0,d=0;
+	while(n != 0)
+	{
+		d = n % 10 ;
+		r = r * 10 + d ;
+		n = n / 10 ;
+	}
+	printf("Reversed Number : %d \n",r);
 }

@@ -14,4 +14,14 @@ public class Basic_Problems_Solutions {
         	                System.out.println(t+" : consonant");
 		}
 	}
+
+	public void reverse_number(int num) {
+		int n=num, r = 0, d = 0;
+		while(n != 0) {
+			d = n % 10;
+			r = r * 10 + d;
+			n = n / 10;
+		}
+		System.out.println("Reversed Number : "+r);
+	}
 }
