@@ -24,4 +24,19 @@ public class Basic_Problems_Solutions {
 		}
 		System.out.println("Reversed Number : "+r);
 	}
+
+	public void decimalToBinary(int num) {
+		int n = num, i=0, j;
+		int bin[] = new int[32];
+		while(n > 0) {
+			bin[i] = n % 2;
+			n = n / 2;
+			i++;
+		}
+		System.out.print("Binary Value of "+num+": ");
+		for(j=i-1; j>=0; j--) {
+			System.out.print(bin[j]);
+		}
+		System.out.println();
+	}
 }

@@ -37,5 +37,20 @@ class Basic_Problems_Solutions {
 		$output['output'] = $r;
 		return $output;
 	}
+
+	public function decimalToBinary() {
+		$n = (int) $this->num;
+		$i = 0;
+		$binStr = '';
+		$output = array();
+		$output['input'] = $this->num;
+		while($n > 0) {
+			$bin = $n % 2;
+			$n = (int) ($n / 2) ;
+			$binStr .= $bin;
+		}
+		$output['output'] = $binStr;
+		return $output;
+	}
 }
 ?>

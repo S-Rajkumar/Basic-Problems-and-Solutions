@@ -4,6 +4,7 @@
 int get_choice();
 void vowels_consonets_digits(char vcd[30]);
 void reverse_number(int num);
+void decimalToBinary(int num);
 
 void main()
 {
@@ -24,6 +25,12 @@ void main()
 		scanf("%d",&num);
 		reverse_number(num);
 		break;
+	case 3:
+		printf("\n\t Decimal to Binary \n");
+		printf("Enter a Number : ");
+		scanf("%d",&num);
+		decimalToBinary(num);
+		break;
 	default :
 		printf("Error : Invalid Choice\n");
 		break;
@@ -36,6 +43,7 @@ int get_choice()
 	printf("\t Basic Problems and Solutions \n");
         printf(" 1. Vowels_Consonets_Digits \n");
 	printf(" 2. Reverse a Given Number \n");
+	printf(" 3. Decimal to Binary Convertor \n");
 	printf("Enter Your choice : ");
 	scanf("%d",&choice);
 	return choice;
@@ -70,4 +78,22 @@ void reverse_number(int num)
 		n = n / 10 ;
 	}
 	printf("Reversed Number : %d \n",r);
+}
+
+void decimalToBinary(int num)
+{
+	int i = 0,j,bin[32],n=num;
+	while(n > 0)
+	{
+		bin[i] = n % 2;
+		n = n / 2;
+		i++;
+	}
+	printf("Binary Value of %d : ",num);
+	
+	for(j=i-1; j>=0; j--)
+	{
+		printf("%d",bin[j]);
+	}
+	printf("\n");
 }
