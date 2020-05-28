@@ -9,6 +9,7 @@ class Main {
                 System.out.println(" 1. Vowels, Consonets and Digits");
 		System.out.println(" 2. Reverse a Number ");
 		System.out.println(" 3. Decimal to Binary Convertor ");
+		System.out.println(" 4. Find next 20 Leap Years ");
                 System.out.print("Enter Your Choice : ");
                 int choice = in.nextInt();
 		switch(choice) {
@@ -29,6 +30,12 @@ class Main {
 				System.out.print("Enter Number : ");
 				num = in.nextInt();
 				s.decimalToBinary(num);
+				break;
+			case 4 :
+				System.out.println("\n\t Find Next 20 Leap Years ");
+				System.out.print("Enter year : ");
+				num = in.nextInt();
+				s.find_next_20_leap_year(num);
 				break;
 			default :
 				System.out.println("\n Error : Invalid Choice ");

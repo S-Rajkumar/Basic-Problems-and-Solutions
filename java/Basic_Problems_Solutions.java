@@ -39,4 +39,15 @@ public class Basic_Problems_Solutions {
 		}
 		System.out.println();
 	}
+
+	public void find_next_20_leap_year(int num) {
+		int y = num, i = 1;
+		while( i <= 20 ) {
+			if( (y % 4 == 0 && y % 100 != 0) || y % 400 == 0 ) {
+				System.out.println(i + ". next leap year is "+y);
+				i++;
+			}
+			y++;
+		}
+	}
 }

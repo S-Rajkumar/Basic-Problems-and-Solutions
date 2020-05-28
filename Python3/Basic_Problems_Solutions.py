@@ -26,12 +26,21 @@ class Basic_Problems_Solutions :
 		for i in bin :
 			print(i,end="")
 		print()
+	def find_next_20_leap_year(self,num) :
+		y = num
+		i = 1
+		while i <= 20 :
+			if (y % 4 == 0 and y % 100 != 0) or y % 400 == 0 :
+				print(str(i)+". next leap year is",y)
+				i += 1
+			y += 1
 
 a = Basic_Problems_Solutions()
 print(Fore.RED + "\t Basic Problems and Solutions")
 print(Fore.WHITE + " 1.Vowels, Consonets and Digits")
 print(Fore.WHITE + " 2.Reverse a Number")
 print(Fore.WHITE + " 3.Decimal to Binary Convertor");
+print(Fore.WHITE + " 4.Find Next 20 Leap years");
 print(Fore.GREEN + "\n Enter Your Choice : ",end="")
 choice = int(input())
 if choice == 1 :
@@ -46,5 +55,9 @@ elif choice == 3 :
 	print(Fore.YELLOW + "\n\t Decimal to Binary")
 	num = int(input(Fore.GREEN + "Enter Number : "))
 	a.decimalToBinary(num)
+elif choice == 4 :
+	print(Fore.YELLOW + "\n\t Find Next 20 Leap Years")
+	num = int(input(Fore.GREEN + "Enter Year : "))
+	a.find_next_20_leap_year(num)
 else :
 	print("Error : Invalid Choice");

@@ -45,3 +45,18 @@ function d2b_convert() {
 	}
 	output.innerHTML += "output : "+ binStr.split("").reverse().join("");
 }
+
+function find_next_20_leap_year() {
+	var y = parseInt(document.getElementById("year_input").value,10);
+	var i = 1;
+	var output = document.getElementById("year_output");
+	output.innerHTML = "input : "+ y + "<br />";
+
+	while(i <= 20 ) {
+		if( (y % 4 == 0 && y % 100 != 0) || y % 400 == 0 ) {
+			output.innerHTML += i +". next leap year is "+ y +"<br />";
+			i++;
+		}
+		y++;
+	}
+}

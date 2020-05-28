@@ -5,6 +5,7 @@ int get_choice();
 void vowels_consonets_digits(char vcd[30]);
 void reverse_number(int num);
 void decimalToBinary(int num);
+void find_next_20_leap_year(int num);
 
 void main()
 {
@@ -31,6 +32,12 @@ void main()
 		scanf("%d",&num);
 		decimalToBinary(num);
 		break;
+	case 4:
+		printf("\n\t Print Next 20 Leap Year \n");
+		printf("Enter year : ");
+		scanf("%d",&num);
+		find_next_20_leap_year(num);
+		break;
 	default :
 		printf("Error : Invalid Choice\n");
 		break;
@@ -44,6 +51,7 @@ int get_choice()
         printf(" 1. Vowels_Consonets_Digits \n");
 	printf(" 2. Reverse a Given Number \n");
 	printf(" 3. Decimal to Binary Convertor \n");
+	printf(" 4. Print Next 20 Leap Years \n");
 	printf("Enter Your choice : ");
 	scanf("%d",&choice);
 	return choice;
@@ -96,4 +104,18 @@ void decimalToBinary(int num)
 		printf("%d",bin[j]);
 	}
 	printf("\n");
+}
+
+void find_next_20_leap_year(int num)
+{
+	int y = num, i=0;
+	while(i < 20)
+	{
+		if( (y % 4 == 0 && y % 100 != 0) || y % 400 == 0 )
+		{
+			printf("%d. next leap year is %d \n",i+1,y);
+			i++;
+		}
+		y++;
+	}
 }

@@ -15,6 +15,6 @@
 - [ ] Write a program to remove duplicates from an array.
 - [ ] Write a program to find a missing number in a given array of 1 to 100.
 - [ ] Write a program to find the 2nd largest number in an unsorted integer array.
-- [ ] Write a program to print next 20 leap years.
+- [x] Write a program to print next 20 leap years.
 - [ ] Write a program to find the prime numbers between 100 and 1000.
 - [ ] Write a program to convert any number to its equivalnet word.

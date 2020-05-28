@@ -52,5 +52,23 @@ class Basic_Problems_Solutions {
 		$output['output'] = $binStr;
 		return $output;
 	}
+
+	public function find_next_20_leap_year() {
+		$y = (int) $this->num;
+		$i = 1;
+		$output = array();
+		$output['input'] = $this->num;
+		$res = array();
+
+		while( $i <= 20 ) {
+			if( ($y % 4 == 0 && $y % 100 != 0) || $y % 400 == 0 ) {
+				$res[$i] = "next leap year is ".$y;
+				$i++;
+			}
+			$y++;
+		}
+		$output['output'] = $res;
+		return $output;
+	}
 }
 ?>
